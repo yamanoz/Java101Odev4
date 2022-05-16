@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 
 public class Main {
+/*
 
     public static void plus(int a,int b)
     {
@@ -48,11 +49,55 @@ public class Main {
     public static void modAlma(int a,int b){
         System.out.println("Sonuc :"+(a%b));
     }
+ */
 
+
+    public static int usAlma(int taban,int us){
+        if(us==0){
+            return 1;
+        }
+        return taban*usAlma(taban,us-1);
+
+    }
     public static void main(String[] args){
 
         Scanner sc=new Scanner(System.in);
-       int select=1;
+        int us,taban;
+        do{
+            System.out.print("Taban sayisina giriniz :");
+            taban=sc.nextInt();
+            System.out.print("Us sayisina giriniz :");
+            us=sc.nextInt();
+            if(us==0&&taban==0){
+                System.out.print("Tanimsiz deger girdiniz !!!");
+            }else {
+                System.out.println("Sonuc :"+usAlma(taban,us));
+            }
+
+        }while (us!=0 && taban!=0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*private static void hesapMakinasi() {
+        Scanner sc=new Scanner(System.in);
+        int select=1;
         String menu="1-Toplama Islemi\n"
                 +"2-Cikarma Islemi\n"
                 +"3-Carpma Islemi|n"
@@ -65,8 +110,8 @@ public class Main {
         while(select!=0){
             System.out.print(menu);
             System.out.print("Lütfen Bir islem seciniz :");
-              select=sc.nextInt();
-              System.out.print("Sayi 1 :");
+            select=sc.nextInt();
+            System.out.print("Sayi 1 :");
             int a=sc.nextInt();
             System.out.print("Sayi 2 :");
             int b=sc.nextInt();
@@ -107,5 +152,6 @@ public class Main {
             }
         }
 
+     */
     }
 }
