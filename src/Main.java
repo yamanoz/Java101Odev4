@@ -49,32 +49,74 @@ public class Main {
     public static void modAlma(int a,int b){
         System.out.println("Sonuc :"+(a%b));
     }
- */
 
 
-    public static int usAlma(int taban,int us){
+    //recursive olarak us alma metodu
+     public static int usAlma(int taban,int us){
         if(us==0){
             return 1;
         }
         return taban*usAlma(taban,us-1);
 
     }
+ */
+public static int isAsalMi(int n,int i)
+{
+    if(i==1){
+        return 1;
+    }
+    else {
+        if(n%i==0){
+            return 0;
+        }
+        else return isAsalMi(n,i-1);
+    }
+}
+
+
     public static void main(String[] args){
 
         Scanner sc=new Scanner(System.in);
-        int us,taban;
-        do{
-            System.out.print("Taban sayisina giriniz :");
-            taban=sc.nextInt();
-            System.out.print("Us sayisina giriniz :");
-            us=sc.nextInt();
-            if(us==0&&taban==0){
-                System.out.print("Tanimsiz deger girdiniz !!!");
-            }else {
-                System.out.println("Sonuc :"+usAlma(taban,us));
-            }
+        System.out.print("Sayi giriniz :");
+        int sayi=sc.nextInt();
 
-        }while (us!=0 && taban!=0);
+        int sonuc=isAsalMi(sayi,sayi/2);
+
+        if(sonuc==1){
+            System.out.print(sayi+" Sayisi asal");
+        }
+        else
+            System.out.print(sayi+" sayisi asal degildir");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //recursivUs();
 
 
 
@@ -152,6 +194,28 @@ public class Main {
             }
         }
 
+
+
+
+//4 recursiveUsdevami
+private static void recursivUs() {
+        Scanner sc=new Scanner(System.in);
+        int us,taban;
+        do{
+            System.out.print("Taban sayisina giriniz :");
+            taban=sc.nextInt();
+            System.out.print("Us sayisina giriniz :");
+            us=sc.nextInt();
+            if(us==0&&taban==0){
+                System.out.print("Tanimsiz deger girdiniz !!!");
+            }else {
+                System.out.println("Sonuc :"+usAlma(taban,us));
+            }
+
+        }while (us!=0 && taban!=0);
+    }
      */
     }
+
+
 }

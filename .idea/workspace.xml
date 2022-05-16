@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f20d98e0-6401-4dd9-8472-fd83fd600992" name="Changes" comment="Motodlarla hesap makinasi yapildi">
+    <list default="true" id="f20d98e0-6401-4dd9-8472-fd83fd600992" name="Changes" comment="Recursive olarak us alma islemi yapildi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -73,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652724977034</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Recursive olarak us alma islemi yapildi">
+      <created>1652732756440</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652732756440</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +97,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Polidrom sayisi bulma" />
     <MESSAGE value="Motodlarla hesap makinasi yapildi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Motodlarla hesap makinasi yapildi" />
+    <MESSAGE value="Recursive olarak us alma islemi yapildi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recursive olarak us alma islemi yapildi" />
   </component>
 </project>
