@@ -59,8 +59,11 @@ public class Main {
         return taban*usAlma(taban,us-1);
 
     }
- */
-public static int isAsalMi(int n,int i)
+
+
+
+    //recursive olarak asal sayi bulma
+    public static int isAsalMi(int n,int i)
 {
     if(i==1){
         return 1;
@@ -72,52 +75,60 @@ public static int isAsalMi(int n,int i)
         else return isAsalMi(n,i-1);
     }
 }
+ */
 
+     public static int sekilYapma(int n, int temp,boolean durum) {
 
-    public static void main(String[] args){
+        if(n>=0 && durum==false)
+        {
+            if(n==0){
+                durum=true;
+                System.out.print(n+" ");
+                return sekilYapma(n+5,temp,durum);
+            }
+            System.out.print(n+" ");
 
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Sayi giriniz :");
-        int sayi=sc.nextInt();
-
-        int sonuc=isAsalMi(sayi,sayi/2);
-
-        if(sonuc==1){
-            System.out.print(sayi+" Sayisi asal");
+            return sekilYapma(n-5,temp,durum);
         }
-        else
-            System.out.print(sayi+" sayisi asal degildir");
+        if(n<0){
+            System.out.print(n+" ");
+
+            durum=true;
+            return sekilYapma(n+5,temp,durum);
+
+
+        }
+        if(n>=0 && durum==true) {
+
+            if (temp==n) {
+                System.out.print(n+" ");
+                return 0;
+            }
+
+            System.out.print(n+" ");
+            return sekilYapma(n + 5, temp,durum);
+        }
+        return 0;
+
+     }
 
 
 
 
 
+    public static void main(String[] args) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayi :");
+        int n = sc.nextInt();
+        boolean durum=false;
+        int temp=n;
+       sekilYapma(n,temp,durum);
+        //recursiveAsal();
 
 
         //recursivUs();
-
+    }
 
 
 
@@ -214,8 +225,28 @@ private static void recursivUs() {
 
         }while (us!=0 && taban!=0);
     }
-     */
+
     }
 
+// recursive olarak asal sayi bulma
+    private static void recursiveAsal() {
+        Scanner sc=new Scanner(System.in);
+        int sayi=1;
 
-}
+        while(sayi!=0){
+            System.out.print("Sayi giriniz :");
+            sayi=sc.nextInt();
+
+            int sonuc=isAsalMi(sayi,sayi/2);
+            if(sonuc==1){
+                System.out.println(sayi+" Sayisi asal");
+            }
+            else
+                System.out.println(sayi+" sayisi asal degildir");
+
+        }
+    }
+    */
+
+
+    }
